@@ -1,5 +1,5 @@
 # PlacenessDB_API
-Placeness nosql databased powered by Firebase
+Placeness nosql database powered by Firebase
 
 created by mania@kaist.ac.kr<br />
 tested on Python 2.7.6
