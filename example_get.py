@@ -1,4 +1,4 @@
-import src
+from src import dbhandler
 
 ############# 0. initialization ############
 db = dbhandler.firebase('https://placenessdb.firebaseio.com/yap/')
@@ -21,5 +21,5 @@ for key in place_instances:
     print "dweller:", dweller
     print "opinion:", opinion
     print "space:", space
-    #print "rawdata:", rawdata
-    
+#print "rawdata:", rawdata
+

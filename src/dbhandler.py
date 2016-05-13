@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
 import urllib2
-import requests
 import json
 
 class firebase:
