@@ -7,7 +7,7 @@ class ontology:
 
         #####depth=2#####
         self.dweller = ['who', 'with']
-        self.time = ['timestamp', 'hour', 'minutes', 'isHoliday', ]
+        self.time = ['timestamp', 'year', 'month', 'day', 'hour', 'minute', 'seconds', 'Weekday', 'isWeekend', 'isHoliday', ]
         self.space = ['traffic', 'weather', 'temperature']
         self.activity = ['what', 'activity']
         self.opinion = ['mood']
