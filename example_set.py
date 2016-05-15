@@ -8,11 +8,11 @@ db = dbhandler.firebase('https://placenessdb.firebaseio.com/yap/')
 place = placeontology.ontology()
 
 ############# 1. assigning place name ############
-placename = "place_4"
+placename = "place_x"
 
 ############# 2. assigning values according to ontology ############
 values_dweller = ['user1', 'girlfriend']
-values_time = [1463030500251, 9, 10, False]
+values_time = [1461737135, 2016, 4, 27, 15, 5, 35, "Wednesday", "false", "not sure"]
 values_space = ['high traffic', 'sunny', 28]
 values_activity = ['action movies', 'watch movies']
 values_opinion = ['excited to watch movies']
