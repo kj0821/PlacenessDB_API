@@ -4,7 +4,7 @@ from src import dbhandler
 db = dbhandler.firebase('https://placenessdb.firebaseio.com/yap/')
 
 ############# 1. fetching data on "place_1" ############
-place_instances = db.get("place_1")
+place_instances = db.get("1024513679")
 
 ############# 2. accessing values of each posts ############
 for key in place_instances:
@@ -21,5 +21,5 @@ for key in place_instances:
     print "dweller:", dweller
     print "opinion:", opinion
     print "space:", space
-#print "rawdata:", rawdata
-
+    #print "rawdata:", rawdata
+    

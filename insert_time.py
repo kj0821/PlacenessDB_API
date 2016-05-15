@@ -22,11 +22,8 @@ place_instances = db.get("")
 for placeid in place_instances:
     place = place_instances[placeid]
     
-    #print "placeid: ", placeid
-      
     for key in place:
         instance = place[key]
-        #print "key: ", key
         
         timestamp = instance['rawdata']['instagram']['created_time']
         ymdhms = unixtimestampToYMDHMS(timestamp)

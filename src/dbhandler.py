@@ -23,5 +23,4 @@ class firebase:
         urlop = urllib2.urlopen(request)
         res = json.load(urlop)
         return res
-    
-     
+
