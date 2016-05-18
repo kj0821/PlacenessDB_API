@@ -15,17 +15,19 @@ def getIsWeekend(day):
     else:
         return "false"
     
-db = dbhandler.firebase('https://placenessdb.firebaseio.com/yap')
+db = dbhandler.firebase('https://placenessdb.firebaseio.com/data/starbucks')
+db_ont = dbhandler.firebase('https://placenessdb.firebaseio.com/ontology/starbucks')
+
 ont = placeontology.ontology()
 place_instances = db.get("")
 
 for placeid in place_instances:
-    place = place_instances[placeid]
-    
+    place = place_instances[placeid]['instagram']
+     
     for key in place:
         instance = place[key]
         
-        timestamp = instance['rawdata']['instagram']['created_time']
+        timestamp = instance['created_time']
         ymdhms = unixtimestampToYMDHMS(timestamp)
         
         year = int(ymdhms.split('-')[0])
@@ -40,6 +42,6 @@ for placeid in place_instances:
         
         values_time = [timestamp, year, month, day, hour, minute, second, weekday, isWeekend, isHoliday]
         json_time = encodeJson(ont.time,values_time)
-        
-        db.put("/"+placeid+"/"+key+"/time", json_time) 
- 
+            
+        db_ont.put("/"+placeid+"/instagram/"+key+"/time", json_time) 
+    
