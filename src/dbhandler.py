@@ -23,4 +23,10 @@ class firebase:
         urlop = urllib2.urlopen(request)
         res = json.load(urlop)
         return res
+        
+    def get_shallow(self, node):
+        request = urllib2.Request(self.root+node+".json?shallow=true")
+        urlop = urllib2.urlopen(request)
+        res = json.load(urlop)
+        return res
 
